@@ -1,0 +1,18 @@
+{
+  "name": "keksobooking-react",
+  "version": "1.0.0",
+  "description": "pet project of keksoboking with react",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Slava Milin",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-devtools-installer": "^2.2.4",
+    "electron-prebuilt-compile": "^2.0.4",
+    "electron-reload": "^1.2.5",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
