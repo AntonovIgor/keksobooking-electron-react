@@ -7,6 +7,6 @@ const Promo = () => {
       <img src="img/keksobooking.svg" alt="Keksobooking. Кексы по соседству" width="215" height="45" />
     </div>
   );
-}
+};
 
 export default Promo;
