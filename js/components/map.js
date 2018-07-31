@@ -1,15 +1,24 @@
 import * as React from 'react';
 import SVGInline from "react-svg-inline"
+import cn from 'classnames';
 
-const Map = () => {
+const Map = (props) => {
+  const mapClasses = cn({
+    'map': true,
+    'map--faded': !props.showMap
+  });
+
   return (
-    <section className="map map--faded">
+    <section className={mapClasses} onMouseMove={props.onMouseMove}>
       <div className="map__pins">
         <div className="map__overlay">
           <h2 className="map__title">И снова Токио!</h2>
         </div>
 
-        <button className="map__pin map__pin--main" style={{left: "570px", top: "375px"}}>
+        <button className="map__pin map__pin--main" style={{left: props.pinPosition.left, top: props.pinPosition.top}}
+                onMouseDown={props.onMouseDown}
+                onMouseUp={props.onMouseUp}
+        >
           <img src="img/muffin-red.svg" width="40" height="44" draggable="false" alt="Метка объявления" />
           <SVGInline svg={`<svg viewBox="0 0 70 70" width="156" height="156" aria-label="Метка для поиска жилья">
             <defs>
