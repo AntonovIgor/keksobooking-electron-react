@@ -9,6 +9,7 @@
   "author": "Slava Milin",
   "license": "MIT",
   "devDependencies": {
+    "classnames": "^2.2.6",
     "electron-devtools-installer": "^2.2.4",
     "electron-prebuilt-compile": "^2.0.4",
     "electron-reload": "^1.2.5",
