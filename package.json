@@ -13,6 +13,7 @@
     "electron-prebuilt-compile": "^2.0.4",
     "electron-reload": "^1.2.5",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-svg-inline": "^2.1.1"
   }
 }
