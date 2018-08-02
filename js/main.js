@@ -1,6 +1,7 @@
 import React from 'react';
 import Promo from './components/promo';
 import Map from './components/map';
+import Notice from "./components/notice";
 
 export default class Main extends React.Component {
     state = {
@@ -49,7 +50,8 @@ export default class Main extends React.Component {
              onMouseUp={this.onMouseUp}
              showMap={this.state.showMap}
              pinPosition={this.state.pinPosition}
-        />
+        />,
+        <Notice />
       ]
     );
   }
