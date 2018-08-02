@@ -3,9 +3,7 @@ import Promo from './components/promo';
 import Map from './components/map';
 
 export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    state = {
       data: [],
       pinPosition: {
         left: 570 + "px",
@@ -14,15 +12,13 @@ export default class Main extends React.Component {
       draggable: false,
       showMap: false
     };
-  }
 
-  componentWillMount() {
+  componentWillMount = () => {
     this.loadData();
-  }
+  };
 
-  onMouseMove(evt) {
+  onMouseMove = (evt) => {
     if (this.state.draggable) {
-      evt.preventDefault();
       const pinPosition = {
         left: evt.nativeEvent.offsetX - 32.5 + 'px',
         top: evt.nativeEvent.offsetY - 32.5 + 'px'
@@ -30,15 +26,15 @@ export default class Main extends React.Component {
 
       this.setState({pinPosition});
     }
-  }
+  };
 
-  onMouseDown(evt) {
+  onMouseDown = (evt) => {
     this.setState({draggable: true});
-  }
+  };
 
-  onMouseUp(evt) {
+  onMouseUp = (evt) => {
     this.setState({showMap: true, draggable: false});
-  }
+  };
 
   async loadData () {
     const data = await fetch('https://js.dump.academy/kekstagram/data').then((response) => response.json());
@@ -48,9 +44,9 @@ export default class Main extends React.Component {
     return (
       [
         <Promo />,
-        <Map onMouseMove={this.onMouseMove.bind(this)}
-             onMouseDown={this.onMouseDown.bind(this)}
-             onMouseUp={this.onMouseUp.bind(this)}
+        <Map onMouseMove={this.onMouseMove}
+             onMouseDown={this.onMouseDown}
+             onMouseUp={this.onMouseUp}
              showMap={this.state.showMap}
              pinPosition={this.state.pinPosition}
         />
