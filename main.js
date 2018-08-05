@@ -1,7 +1,9 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
-require('electron-reload')(__dirname);
+import {enableLiveReload} from 'electron-compile';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
+
+enableLiveReload();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

@@ -1,0 +1,5 @@
+{
+  "presets": ["es2016-node5", "react", "stage-1"],
+  "plugins": ["transform-async-to-generator", "array-includes"],
+  "sourceMaps": "inline"
+}
