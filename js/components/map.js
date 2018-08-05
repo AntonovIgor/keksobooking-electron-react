@@ -15,7 +15,7 @@ const Map = (props) => {
           <h2 className="map__title">И снова Токио!</h2>
         </div>
 
-        <button className="map__pin map__pin--main" style={{left: props.pinPosition.left, top: props.pinPosition.top}}
+        <button className="map__pin map__pin--main" style={{left: props.pinPosition.left + 'px', top: props.pinPosition.top + 'px'}}
                 onMouseDown={props.onMouseDown}
                 onMouseUp={props.onMouseUp}
         >
